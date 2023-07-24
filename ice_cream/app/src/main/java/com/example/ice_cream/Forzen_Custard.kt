@@ -1,7 +1,6 @@
 package com.example.ice_cream
 
 fun main (){
-    var Forzen_Custard = Array<String>()
     while (true) {
         try {
             println(
