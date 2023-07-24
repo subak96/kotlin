@@ -46,7 +46,6 @@ fun main (){
         }
     }
 }
-
 class soft_menu {
     fun Soft(){
         println("어떤 맛을 고르시겠습니까?\n" +
