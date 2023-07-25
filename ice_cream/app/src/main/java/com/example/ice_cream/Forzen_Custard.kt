@@ -69,7 +69,7 @@ class soft_menu {
             }
 
             5 -> {
-                return main()
+                return
             }
         }
     }
