@@ -2,6 +2,7 @@ package com.example.a1
 
 class Forzen_Custard_MENU : MENU() {
     fun Forzen_Custard() {
+
         while (true) {
             try {
                 println(
@@ -18,25 +19,18 @@ class Forzen_Custard_MENU : MENU() {
                     1 -> {
                         println("${soft_menu().Soft()}")
                     }
-
                     2 -> {
                         println("${shake_menu().Shake()}")
                     }
-
                     3 -> {
                         println("${bead_menu().Bead()}")
-
                     }
-
                     4 -> {
                         println("${gelato_menu().Gelato()}")
-
                     }
-
                     5 -> {
                         return main()
                     }
-
                     0 -> {
                         println("종료합니다.")
                     }
@@ -64,19 +58,15 @@ class Forzen_Custard_MENU : MENU() {
                         1 -> {
                             println("초코맛을 선택하셨습니다.")
                         }
-
                         2 -> {
                             println("바닐라맛을 선택하셨습니다.")
                         }
-
                         3 -> {
                             println("딸기맛을 선택하셨습니다.")
                         }
-
                         4 -> {
                             println("자두맛을 선택하셨습니다.")
                         }
-
                         5 -> {
                             return Forzen_Custard_MENU().Forzen_Custard()
                         }
@@ -92,7 +82,6 @@ class Forzen_Custard_MENU : MENU() {
             }
         }
     }
-
     class shake_menu{
         fun Shake() {
             while (true){
@@ -106,19 +95,15 @@ class Forzen_Custard_MENU : MENU() {
                         1 -> {
                             println("초코맛을 선택하셨습니다.")
                         }
-
                         2 -> {
                             println("바닐라맛을 선택하셨습니다.")
                         }
-
                         3 -> {
                             println("딸기맛을 선택하셨습니다.")
                         }
-
                         4 -> {
                             println("커피맛을 선택하셨습니다.")
                         }
-
                         5 -> {
                             return Forzen_Custard_MENU().Forzen_Custard()
                         }
@@ -134,7 +119,6 @@ class Forzen_Custard_MENU : MENU() {
         }
     }
     }
-
     class bead_menu{
         fun Bead() {
             while (true) {
@@ -148,15 +132,12 @@ class Forzen_Custard_MENU : MENU() {
                         1 -> {
                             println("초코맛을 선택하셨습니다.")
                         }
-
                         2 -> {
                             println("바닐라맛을 선택하셨습니다.")
                         }
-
                         3 -> {
                             println("딸기맛을 선택하셨습니다.")
                         }
-
                         4 -> {
                             println("초코＆바닐라을 선택하셨습니다.")
                         }
@@ -189,23 +170,18 @@ class Forzen_Custard_MENU : MENU() {
                         1 -> {
                             println("초코맛을 선택하셨습니다.")
                         }
-
                         2 -> {
                             println("바닐라맛을 선택하셨습니다.")
                         }
-
                         3 -> {
                             println("딸기맛을 선택하셨습니다.")
                         }
-
                         4 -> {
                             println("땅콩을 선택하셨습니다.")
                         }
-
                         5 -> {
                             return Forzen_Custard_MENU().Forzen_Custard()
                         }
-
                         else -> {
                             println("잘못 입력하셨습니다.")
                             return Gelato()

@@ -1,161 +1,145 @@
 package com.example.ice_cream
 
-fun main (){
-    while (true) {
-        try {
+class ForzenCustard : Item() {
+    val icemeun: MutableList<Menu> = mutableListOf(
+        Menu(1,"소프트 콘\t\t", 2000, "부드러운 아이스크림"),
+        Menu(2,"쉐이크\t\t\t", 2500, "섞어먹는 아이스크림"),
+        Menu(3,"구슬아이스크림\t\t", 2500, "방울방울 아이스크림"),
+        Menu(4,"젤라또\t\t\t", 3000, "꾸덕한 아이스크림")
+    )
+    val selectedMenus: MutableList<Pair<Menu, String>> = mutableListOf()
+    val cart = Cart
+
+    override fun displayInfo() {
+        println("[ Frozen Custard MENU ]")
+        for (menu in icemeun) {
             println(
-                "[ Forzen Custard MENU ]\n" +
-                        "[1]소프트 콘          |W 2.0|\n" +
-                        "[2]쉐이크            |W 4.5|\n" +
-                        "[3]구슬아이스크림      |W 5.0|\n" +
-                        "[4]젤라또            |W 4.5|\n" +
-                        "[5]뒤로가기\n" +
-                        "[0]종료"
+                "[${menu.num}] ${menu.name}  ${menu.price}  ${menu.introduce}"
             )
-            var choice = readLine()?.toInt()
-            when (choice) {
-                1 -> {
-                    println("${soft_menu().Soft()}")
-                }
-
-                2 -> {
-                    println("${shake_menu().Shake()}")
-                }
-
-                3 -> {
-                    println("${bead_menu().Bead()}")
-
-                }
-
-                4 -> {
-                    println("${gelato_menu().Gelato()}")
-
-                }
-
-                5 -> {
-                    return main()
-                }
-
-                else -> {
-                    println("종료합니다.")
-                }
-            }
-            break
-        } catch (e: NumberFormatException) {
-            println("잘못 입력하셨습니다.")
         }
+        println("[0] 뒤로가기")
     }
-}
-class soft_menu {
-    fun Soft(){
-        println("어떤 맛을 고르시겠습니까?\n" +
-                "[1]초코\n[2]바닐라\n[3]딸기\n[4]자두\n[5]뒤로가기")
-        var soft = readLine()?.toInt()
-        when (soft) {
-            1 -> {
-                println("초코맛을 선택하셨습니다.")
-            }
 
-            2 -> {
-                println("바닐라맛을 선택하셨습니다.")
-            }
+    override fun function() {
+        first@ while (true) {
+            try {
+                val choice = readLine()?.toInt()
 
-            3 -> {
-                println("딸기맛을 선택하셨습니다.")
-            }
+                when (choice) {
+                    1, 2, 3, 4 -> {
+                        val selectedMenu = icemeun[choice - 1]
+                        println("메뉴: ${selectedMenu.name}, 가격: ${selectedMenu.price}원, 설명: ${selectedMenu.introduce}")
 
-            4 -> {
-                println("자두맛을 선택하셨습니다.")
-            }
+                        // 맛 선택
+                        second@ while (true) {
+                            try {
 
-            5 -> {
-                return
-            }
-        }
-    }
-}
+                                println("맛을 선택하세요. [1] 초콜릿, [2] 바나나, [3] 딸기 [4]메론 [0]뒤로가기")
+                                val flavorChoice = readLine()?.toInt()
+                                when (flavorChoice) {
 
-class shake_menu{
-    fun Shake() {
-        println("어떤 맛을 고르시겠습니까?\n" +
-                "[1]초코\n[2]바닐라\n[3]딸기\n[4]커피\n[5]뒤로가기")
-        var shake = readLine()?.toInt()
-        when (shake) {
-            1 -> {
-                println("초코맛을 선택하셨습니다.")
-            }
+                                    1 -> {
+                                        selectedMenus.add(selectedMenu to "초콜릿")
+                                        break
+                                    }
 
-            2 -> {
-                println("바닐라맛을 선택하셨습니다.")
-            }
+                                    2 -> {
+                                        selectedMenus.add(selectedMenu to "바나나")
+                                        break
+                                    }
 
-            3 -> {
-                println("딸기맛을 선택하셨습니다.")
-            }
+                                    3 -> {
+                                        selectedMenus.add(selectedMenu to "딸기")
+                                        break
+                                    }
 
-            4 -> {
-                println("커피맛을 선택하셨습니다.")
-            }
+                                    4 -> {
+                                        selectedMenus.add(selectedMenu to "메론")
+                                        break
+                                    }
 
-            5 -> {
-                return main()
-            }
-        }
-    }
-}
+                                    0 -> {
+                                        displayInfo()
+                                        continue@first
+                                    }
+                                    else -> {
+                                        println("잘못된 맛을 선택하셨습니다.")
+                                        continue
+                                    }
+                                }
+                            } catch (e: NumberFormatException) {
+                                println("잘못 입력하셨습니다. 다시 입력하세요.")
+                                continue@second
+                            }
+                        }
+                        println("다른 메뉴도 선택하시겠습니까? ([1] 네       [2] 아니요)")
+                        third@ while (true) {
 
-class bead_menu{
-    fun Bead() {
-        println("어떤 맛을 고르시겠습니까?\n" +
-                "[1]초코\n[2]바닐라\n[3]딸기\n[4]초코＆바닐라\n[5]뒤로가기")
-        var bead = readLine()?.toInt()
-        when (bead) {
-            1 -> {
-                println("초코맛을 선택하셨습니다.")
-            }
+                            val anotherChoice = readLine()?.toInt()
+                            if (anotherChoice == 1) {
+                                println("[ Frozen Custard MENU ]")
 
-            2 -> {
-                println("바닐라맛을 선택하셨습니다.")
-            }
+                                for ((index, menu) in icemeun.withIndex()) {
+                                    println(
+                                        "[${index + 1}] ${menu.name} ${menu.price} ${menu.introduce}"
+                                    )
+                                }
+                                println("[0] 뒤로가기")
+                                break
+                            } else if (anotherChoice == 2) {
+                                for ((menu, flavor) in selectedMenus) {
+                                    println("메뉴: ${menu.name}, 가격: ${menu.price}원, 설명: ${menu.introduce}, 맛: $flavor")
+                                }
+                                println("위 메뉴를 장바구니에 추가하시겠습니까?")
+                                println("[1]확인                     [2]취소")
+                                fourth@ while (true) {
+                                    try {
+                                        val selec = readLine()?.toInt()
+                                        if (selec == 1) {
 
-            3 -> {
-                println("딸기맛을 선택하셨습니다.")
-            }
+                                            for ((menu) in selectedMenus) {
+                                                cart.addmenus((menu))
+                                            }
+                                            println("메뉴가 장바구니에 추가되었습니다.\n")
 
-            4 -> {
-                println("초코＆바닐라을 선택하셨습니다.")
-            }
+                                            println("장바구니 목록")
+                                            for (cart in cart.menus) {
+                                                println("${cart.name} ${cart.price} ${cart.introduce}\n")
+                                            }
+                                            return main()
+                                        } else if (selec == 2) {
+                                            return main()
+                                        } else {
+                                            println("잘못 입력하셨습니다.")
+                                            continue@fourth
+                                        }
 
-            5 -> {
-                return main()
-            }
-        }
-    }
-}
-class gelato_menu{
-    fun Gelato(){
-        println("어떤 맛을 고르시겠습니까?\n" +
-                "[1]초코\n[2]바닐라\n[3]딸기\n[4]땅콩\n[5]뒤로가기")
-        var gelato = readLine()?.toInt()
-        when (gelato) {
-            1 -> {
-                println("초코맛을 선택하셨습니다.")
-            }
+                                    } catch (e: Exception) {
+                                        println("잘못 입력하셨습니다.")
 
-            2 -> {
-                println("바닐라맛을 선택하셨습니다.")
-            }
+                                    }
+                                }
+                            }
+                            else if (anotherChoice == 0)
 
-            3 -> {
-                println("딸기맛을 선택하셨습니다.")
-            }
+                            else {
+                                println("잘못 입력하셨습니다 1 또는 2를 입력하세요.")
 
-            4 -> {
-                println("땅콩을 선택하셨습니다.")
-            }
-
-            5 -> {
-                return main()
+                                continue@third
+                            }
+                        }
+                    }
+                    0 -> {
+                        return main()
+                    }
+                    else -> {
+                        println("잘못된 선택입니다. 번호를 다시 입력하세요.")
+                        displayInfo()
+                    }
+                }
+            } catch (e: Exception) {
+                println("잘못 입력하셨습니다. 번호를 다시 입력하세요.")
+                displayInfo()
             }
         }
     }
