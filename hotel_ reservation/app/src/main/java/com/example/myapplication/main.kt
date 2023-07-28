@@ -1,8 +1,8 @@
-package com.example.myapplication
+package net.flow9.thisiskotlin.kinberger
 
-fun main ()
-{
-    var  res = reservation()
-
-    res.hotel()
+fun main(){
+    val cart = Cart
+    cart.money = Inputmoney()
+    val play = Play()
+    play.run()
 }
