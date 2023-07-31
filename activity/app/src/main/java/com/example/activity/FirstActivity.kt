@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,16 @@ class FirstActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+        val btn_call3 = findViewById<Button>(R.id.buttonThirdActivity)
+        btn_call3.setOnClickListener {
+            val edit_text = findViewById<EditText>(R.id.edit_data)
+            val strData = edit_text.text.toString()
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("dataFromFirstActivity",strData)
+            startActivity(intent)
+        }
+
+
     }
     fun doOnBtnClick(view: View){
         when(view.getId()) {

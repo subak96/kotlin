@@ -13,8 +13,10 @@
         android:text="첫번째 액티비티 입니다."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242" />
 
     <Button
         android:id="@+id/btn_1"
@@ -47,5 +49,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonDialActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMapActivity">
+
+        <EditText
+            android:id="@+id/edit_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="데이터 입력" />
+
+        <Button
+            android:id="@+id/buttonThirdActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세번째 액티비티에 데이터 전달" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
