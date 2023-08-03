@@ -20,7 +20,7 @@ class SingInActivity : AppCompatActivity() {
             val useID = editTextID.text.toString()
             val password = editTextPassword.text.toString()
 
-            if (useID.isEmpty() && password.isEmpty()){
+            if (useID.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "아이디와 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show()
             }
             else {
@@ -28,7 +28,6 @@ class SingInActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
         val btn2 = findViewById<Button>(R.id.btn_2)
         btn2.setOnClickListener{
             val intent = Intent(this, SignpActivity::class.java)
