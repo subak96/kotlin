@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class SignpActivity : AppCompatActivity() {
@@ -24,12 +25,14 @@ class SignpActivity : AppCompatActivity() {
             val usePassword = editTextPassword.text.toString()
             val useAge = editTextAge.text.toString()
 
+
             if (useID.isEmpty() || useName.isEmpty() || usePassword.isEmpty() || useAge.isEmpty()){
                 Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_SHORT).show()
             }
             else {
                 val intent = Intent(this, SingInActivity::class.java)
-                startActivity(intent)
+
+                finish()
             }
         }
     }

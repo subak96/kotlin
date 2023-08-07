@@ -25,6 +25,7 @@ class SingInActivity : AppCompatActivity() {
             }
             else {
                 val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("userID",useID)
                 startActivity(intent)
             }
         }
