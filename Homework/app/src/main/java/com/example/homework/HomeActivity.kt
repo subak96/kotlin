@@ -19,9 +19,10 @@ class HomeActivity : AppCompatActivity() {
 
         val Text1 = findViewById<TextView>(R.id.textView_1)
         Text1.text = "ID: $userID"
-
-
-
+        val Text2 = findViewById<TextView>(R.id.textView_2)
+        Text2.text = "이름: $userName"
+        val Text3 = findViewById<TextView>(R.id.textView_3)
+        Text3.text = "나이 $userAge"
 
         val btn4 = findViewById<Button>(R.id.btn_4)
         btn4.setOnClickListener {

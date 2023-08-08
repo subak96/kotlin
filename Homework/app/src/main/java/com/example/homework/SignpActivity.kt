@@ -25,7 +25,6 @@ class SignpActivity : AppCompatActivity() {
             val usePassword = editTextPassword.text.toString()
             val useAge = editTextAge.text.toString()
 
-
             if (useID.isEmpty() || useName.isEmpty() || usePassword.isEmpty() || useAge.isEmpty()){
                 Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_SHORT).show()
             }
