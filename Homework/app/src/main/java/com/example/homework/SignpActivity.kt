@@ -29,8 +29,6 @@ class SignpActivity : AppCompatActivity() {
                 Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_SHORT).show()
             }
             else {
-                val intent = Intent(this, SingInActivity::class.java)
-
                 finish()
             }
         }
