@@ -29,6 +29,11 @@ class SignpActivity : AppCompatActivity() {
                 Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_SHORT).show()
             }
             else {
+                intent.putExtra("ID",editTextID.text.toString())
+                intent.putExtra("password",editTextPassword.text.toString())
+                intent.putExtra("name",editTextID.text.toString())
+                intent.putExtra("Age",editTextAge.text.toString())
+                setResult(RESULT_OK,intent)
                 finish()
             }
         }
