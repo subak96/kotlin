@@ -29,17 +29,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-        <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="303dp"
-        android:layout_height="182dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteY="16dp" />
-
         <TextView
             android:id="@+id/textView_1"
             android:layout_width="wrap_content"
@@ -49,7 +38,7 @@
             android:fontFamily="@font/in"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
         <TextView
             android:id="@+id/textView_2"
@@ -121,5 +110,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="239dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bbb" />
+
+        </FrameLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

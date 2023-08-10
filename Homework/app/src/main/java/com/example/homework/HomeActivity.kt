@@ -5,13 +5,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import kotlin.random.Random
 
 class HomeActivity : AppCompatActivity() {
 
+    val imageID = arrayOf(
+        R.drawable.aaa,
+        R.drawable.bbb,
+        R.drawable.ccc,
+        R.drawable.ddd,
+        R.drawable.eee
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -28,6 +37,10 @@ class HomeActivity : AppCompatActivity() {
         btn4.setOnClickListener {
             finish()
         }
+        val imageView = findViewById<ImageView>(R.id.imageView2)
+
+        val randomImageId = imageID[Random.nextInt(imageID.size)]
+        imageView.setImageResource(randomImageId)
 
     }
 
