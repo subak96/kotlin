@@ -18,21 +18,17 @@ class SignpActivity : AppCompatActivity() {
             val editTextName = findViewById<EditText>(R.id.Password_1)
             val editTextPassword = findViewById<EditText>(R.id.Password_2)
             val editTextID = findViewById<EditText>(R.id.Password_3)
-            val editTextAge = findViewById<EditText>(R.id.Password_4)
 
             val useID = editTextID.text.toString()
             val useName = editTextName.text.toString()
             val usePassword = editTextPassword.text.toString()
-            val useAge = editTextAge.text.toString()
 
-            if (useID.isEmpty() || useName.isEmpty() || usePassword.isEmpty() || useAge.isEmpty()){
+            if (useID.isEmpty() || useName.isEmpty() || usePassword.isEmpty()){
                 Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_SHORT).show()
             }
             else {
                 intent.putExtra("ID",editTextID.text.toString())
                 intent.putExtra("password",editTextPassword.text.toString())
-                intent.putExtra("name",editTextID.text.toString())
-                intent.putExtra("Age",editTextAge.text.toString())
                 setResult(RESULT_OK,intent)
                 finish()
             }
