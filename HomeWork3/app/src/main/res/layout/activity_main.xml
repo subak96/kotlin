@@ -8,7 +8,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/listrecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -27,7 +27,7 @@
         android:layout_marginStart="10dp"
         android:text="내배캠동"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/listrecyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,14 +39,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView"
-        app:srcCompat="@drawable/arrow_down_sign_to_navigate" />
+        app:srcCompat="@drawable/arrow_down" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="34dp"
         android:layout_height="25dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/listrecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bell" />
