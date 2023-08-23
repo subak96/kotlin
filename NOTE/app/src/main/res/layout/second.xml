@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="187dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:paddingLeft="300dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="68dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_group"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            android:gravity="center"
+
+            >
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/layout_8"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:srcCompat="@drawable/icons_2"
+                    />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="103dp"
+                    android:layout_height="18dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="회원정보관리"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="|"
+                    android:textColor="#dAe0ED"/>
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/icons_3"
+                    android:paddingLeft="25dp"/>
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="48dp"
+                    android:layout_height="18dp"
+                    android:layout_weight="1"
+                    android:text="로그아웃"
+                    android:textSize="13dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            tools:layout_editor_absoluteX="0dp">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="11dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="272dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/imageView8"
+                android:layout_weight="1"
+                android:text="내이름"
+                android:textColor="#2C3038"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="87dp"
+                android:layout_height="18dp"
+                android:layout_below="@+id/textView2"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/imageView8"
+                android:text="사용중인 서비스"
+                android:textSize="13dp"
+                android:textColor="#8790a3"/>
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout6"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/textView2"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/textView8"
+                android:background="@drawable/layout_7"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="오배캠"
+                    android:textColor="#2994E2"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/textView2"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/LinearLayout6"
+                android:background="@drawable/layout_7"
+                android:gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="내배캠"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    android:textColor="#2994E2"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="397dp"
+        android:layout_marginTop="193dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="40dp"
+                android:background="@drawable/layout_9">
+
+                <LinearLayout
+                    android:layout_width="109.33dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/layout_10"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="고객지원"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="109.33dp"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="영상보기"
+                        android:textColor="#a5afc2"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="109.33dp"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="매장통계"
+                        android:textColor="#a5afc2"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="316dp"
+            android:layout_height="310dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+            tools:layout_editor_absoluteX="47dp">
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="공지사항"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="사용방법안내"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="A/S잡스"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="1:1문의"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="채팅상담"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="임시 비밀번호 설정"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="316dp"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="이달의 안전팁"
+                android:textColor="#565d6b"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        ></androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
