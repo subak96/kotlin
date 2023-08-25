@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="187dp">
@@ -193,6 +193,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
+            android:background="@drawable/layout_11"
             >
 
             <LinearLayout
@@ -251,9 +252,17 @@
                         android:textSize="16dp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="60dp"
+            android:background="#E8ECF5"
+            app:layout_constraintTop_toTopOf="parent"></View>
 
         <LinearLayout
             android:layout_width="316dp"
@@ -347,6 +356,92 @@
         android:layout_width="match_parent"
         android:layout_height="210dp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
-        ></androidx.constraintlayout.widget.ConstraintLayout>
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:background="@drawable/layout_12"
+                android:gravity="center"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="모바일 고객센터 방문"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/icons_4" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#212845"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="80dp">
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="51dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/a_02" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="163dp"
+                android:layout_marginTop="17dp"
+                android:text="홍보 배너 영역\n360x80"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#f5f7fa"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+            android:paddingTop="15dp"
+            android:paddingLeft="25dp">
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="이용 약관  |  개인정보처리방침"
+                android:textColor="#8790a3"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
