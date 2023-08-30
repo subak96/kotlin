@@ -1,5 +1,6 @@
 package com.example.homework3
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,9 +20,14 @@ class Adapter (val Item:MutableList<Date>) : RecyclerView.Adapter<Adapter.Holder
         return Holder(binding)
     }
     override fun onBindViewHolder(holder: Holder, position: Int) {
+
+        holder.itemView.setOnClickListener {
+            itemClick?.onClick(it,position)
+        }
+
        holder.ImageView.setImageResource(Item[position].ImageView)
         holder.Tite.text = Item[position].itemTite
-        holder.Position.text = Item[position].c
+        holder.Position.text = Item[position].Address
 
         val price = Item[position].price
         holder.price.text = DecimalFormat("#,###").format(price)+"원"
@@ -29,6 +35,8 @@ class Adapter (val Item:MutableList<Date>) : RecyclerView.Adapter<Adapter.Holder
         holder.chat.text = Item[position].Chat.toString()
 
     }
+
+
 
     override fun getItemId(position: Int): Long {
         return position.toLong()

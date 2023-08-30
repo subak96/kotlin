@@ -33,7 +33,7 @@ class SingInActivity : AppCompatActivity() {
                 Toast.makeText(this, "아이디와 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("userID", useID)
+                intent.putExtra("utserID", useID)
                 startActivity(intent)
             }
         }
