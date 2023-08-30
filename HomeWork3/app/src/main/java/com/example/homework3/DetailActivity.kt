@@ -33,5 +33,7 @@ class DetailActivity : AppCompatActivity() {
         back.setOnClickListener {
             finish()
         }
+
+
     }
 }

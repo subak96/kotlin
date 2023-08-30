@@ -177,8 +177,6 @@ class MainActivity : AppCompatActivity() {
                     putExtra("detail", selectedItem.diteil)
                     putExtra("address", selectedItem.Address)
                 }
-
-
                 startActivity(intent)
             }
         }
