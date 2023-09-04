@@ -156,7 +156,6 @@ class MainActivity : AppCompatActivity() {
                 6
             )
         )
-
         binding.listrecyclerView.adapter = Adapter(dataList)
 
         val adapter = Adapter(dataList)
