@@ -11,7 +11,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         var binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
 
         // MainActivity에서 인텐트로 넘어온 데이터 받기
         val imageId = intent.getIntExtra("ImageView", 0)
