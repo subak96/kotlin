@@ -43,5 +43,25 @@ class MainActivity : AppCompatActivity() {
                 binding.value.text = "값 : $result"
             }
         }
+        binding.multiplication.setOnClickListener {
+            val number1 = binding.number1Edit.text.toString().toIntOrNull() ?: 0
+            val number2 = binding.number2Edit.text.toString().toIntOrNull() ?: 0
+
+            calculatorViewModel.setInPut(number1 * number2)
+
+            calculatorViewModel._inputlivedate.observe(this) { result ->
+                binding.value.text = "값 : $result"
+            }
+        }
+        binding.division.setOnClickListener {
+            val number1 = binding.number1Edit.text.toString().toIntOrNull() ?: 0
+            val number2 = binding.number2Edit.text.toString().toIntOrNull() ?: 0
+
+            calculatorViewModel.setInPut(number1 / number2)
+
+            calculatorViewModel._inputlivedate.observe(this) { result ->
+                binding.value.text = "값 : $result"
+            }
+        }
     }
 }

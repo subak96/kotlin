@@ -61,7 +61,7 @@
             android:id="@+id/Plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:text="더하기"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,10 +71,10 @@
             android:id="@+id/subtraction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
+            android:layout_marginStart="10dp"
             android:text="빼기"
             app:layout_constraintBottom_toBottomOf="@+id/Plus"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Plus"
             app:layout_constraintTop_toTopOf="@+id/Plus"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -89,6 +89,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Plus" />
+
+        <Button
+            android:id="@+id/multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="곱하기"
+            app:layout_constraintBottom_toBottomOf="@+id/subtraction"
+            app:layout_constraintStart_toEndOf="@+id/subtraction"
+            app:layout_constraintTop_toTopOf="@+id/subtraction" />
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="나누기"
+            app:layout_constraintBottom_toBottomOf="@+id/multiplication"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/multiplication"
+            app:layout_constraintTop_toTopOf="@+id/multiplication" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
